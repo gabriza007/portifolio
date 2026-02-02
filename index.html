@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Ribeiro | Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">&lt;Gabriel/&gt;</div>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contato" class="btn-contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">Disponível para Projetos</span>
+            <h1>UI/UX Designer & <br> <span class="highlight">Full-Stack Dev</span></h1>
+            <p>Estudante na Escola Técnica Porto Digital. Unindo a performance do Python/Django com a elegância do Design.</p>
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn primary">Ver Projetos</a>
+                <a href="https://github.com/" target="_blank" class="btn secondary">
+                    <span class="material-icons">code</span> GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Sobre Mim</h2>
+                    <p>Tenho 18 anos e sou movido pela curiosidade técnica. Comecei explorando as entranhas do <strong>Manjaro Linux</strong> e hoje aplico essa mesma busca por eficiência no desenvolvimento web.</p>
+                    <p>Meu foco é criar aplicações completas: desenho a interface no <strong>Figma</strong> e construo a lógica no <strong>Back-end (Python)</strong>. Atualmente trabalhando no projeto <em>Boletim Aberto</em> para democratizar dados educacionais.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="material-icons icon-stat">terminal</span>
+                        <h3>Dev</h3>
+                        <p>Python & Django</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="material-icons icon-stat">brush</span>
+                        <h3>Design</h3>
+                        <p>Figma & UI/UX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="section dark-bg">
+        <div class="container">
+            <h2>Meus Repositórios</h2>
+            <p class="subtitle">Projetos carregados automaticamente do meu GitHub.</p>
+            
+            <div class="projects-grid" id="github-projects">
+                <p style="color: #666;">Carregando projetos...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><span class="material-icons">code</span> Back-end</h3>
+                    <ul>
+                        <li>Python 3</li>
+                        <li>Django Framework</li>
+                        <li>Lógica de Programação</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="material-icons">design_services</span> Front & Design</h3>
+                    <ul>
+                        <li>Figma (Prototipagem)</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript Básico</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="material-icons">settings_suggest</span> Infra & Tools</h3>
+                    <ul>
+                        <li>Linux (Manjaro/Arch)</li>
+                        <li>Git & GitHub</li>
+                        <li>Hardware Troubleshooting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container footer-content">
+            <h2>Vamos conversar?</h2>
+            <div class="social-links">
+                <a href="#" class="social-btn">Email</a>
+                <a href="#" class="social-btn">LinkedIn</a>
+                <a href="#" class="social-btn">GitHub</a>
+            </div>
+            <p class="copyright">© 2026 Gabriel Ribeiro. Powered by Code & Coffee.</p>
+        </div>
+    </footer>
+
+    <script>
+        const username = "gabriza007";
+
+        const container = document.getElementById('github-projects');
+
+        function getProjects() {
+            fetch(`https://api.github.com/users/${username}/repos?sort=updated&direction=desc`)
+            .then(response => {
+                if (!response.ok) throw new Error("Usuário não encontrado");
+                return response.json();
+            })
+            .then(data => {
+                container.innerHTML = '';
+                
+                const projects = data.slice(0, 6);
+
+                if (projects.length === 0) {
+                    container.innerHTML = '<p>Nenhum repositório encontrado.</p>';
+                    return;
+                }
+
+                projects.forEach(repo => {
+                    const card = document.createElement('article');
+                    card.className = 'project-card';
+                    
+                    const description = repo.description ? repo.description : "Projeto de desenvolvimento.";
+                    const language = repo.language ? repo.language : "Código";
+
+                    card.innerHTML = `
+                        <div class="project-header">
+                            <span class="folder-icon material-icons">folder</span>
+                            <div class="project-links">
+                                <a href="${repo.html_url}" target="_blank"><span class="material-icons">open_in_new</span></a>
+                            </div>
+                        </div>
+                        <h3>${repo.name}</h3>
+                        <p>${description}</p>
+                        <div class="card-footer">
+                            <span class="tech-tag">${language}</span>
+                            <span class="stars"><span class="material-icons star-icon">star</span> ${repo.stargazers_count}</span>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => {
+                container.innerHTML = `<p style="color:#ff5555">Erro: Verifique se o usuário "${username}" está correto no código.</p>`;
+            });
+        }
+        
+        getProjects();
+    </script>
+</body>
+</html>
