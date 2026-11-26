@@ -1,23 +1,19 @@
 # Gabriel Ribeiro | Portfólio
 
-Portfólio pessoal de desenvolvimento web, front-end e UI/UX, com projetos em destaque, formação, competências técnicas e integração com a API pública do GitHub.
+Portfólio pessoal em estética editorial com galeria de prints reais da **Liga Caramelo**, lista de projetos, formação e animações de scroll com **GSAP + ScrollTrigger + Lenis** via CDN gratuito.
 
 **[Acessar o portfólio](https://gabriza007.github.io/portifolio/)** · [Perfil no GitHub](https://github.com/gabriza007)
 
-## Sobre o projeto
+## Recursos
 
-Site estático construído com HTML semântico, CSS modular com tokens de design e JavaScript puro. Destaca os projetos principais (**Liga Caramelo** e **Ponte Segura**) e consulta a API pública do GitHub para exibir os repositórios atualizados da conta `gabriza007`.
-
-### Recursos
-
-- Layout Editorial Dark responsivo com tokens semânticos de cor e tipografia.
-- Seção de projetos em destaque (Liga Caramelo público + painel admin e Ponte Segura) antes dos repositórios públicos do GitHub.
-- Seção de formação (ETE Porto Digital e CESAR School) e matriz de competências técnicas atualizada.
-- Menu mobile acessível, navegação por teclado (`:focus-visible`, skip link), estados de carregamento/erro e cópia rápida de e-mail.
+- Identidade editorial em papel claro (`#f4f1ea`) contrastada com galeria escura (`#111110`) para exibição dos prints reais da Liga Caramelo.
+- Animações de scroll gratuitas com **GSAP 3 + ScrollTrigger** e rolagem suave com **Lenis**, respeitando `prefers-reduced-motion`.
+- Índice editorial para projetos complementares (**Ponte Segura**, **Assistente de IA**) e carregamento dinâmico dos demais repositórios pela API pública do GitHub.
+- Menu mobile acessível, navegação por teclado (`:focus-visible`, skip link) e cópia rápida de e-mail.
 
 ## Tecnologias
 
-HTML5 · CSS3 · JavaScript · GitHub REST API · Google Fonts
+HTML5 · CSS3 · JavaScript · GSAP + ScrollTrigger (CDN) · Lenis (CDN) · GitHub REST API · Google Fonts
 
 ## Executar localmente
 
@@ -32,9 +28,10 @@ Acesse `http://localhost:8000`. Não há instalação de dependências nem etapa
 ## Estrutura
 
 ```text
-index.html   Estrutura semântica e conteúdo do portfólio
-styles.css   Tokens de design, layout responsivo e acessibilidade
-script.js    Menu mobile, reveal progressivo, cópia de e-mail e API do GitHub
+index.html              Estrutura semântica, galeria e seções editoriais
+styles.css              Tokens visuais, tipografia, molduras e responsividade
+script.js               Animações Lenis/GSAP, menu mobile e API do GitHub
+assets/liga-caramelo/   Capturas reais da área pública e painel admin
 ```
 
 ## Autor
