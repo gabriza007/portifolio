@@ -1,175 +1,441 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Ribeiro | Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Ribeiro — Desenvolvimento Web &amp; UI/UX</title>
+  <meta name="description" content="Portfólio de Gabriel Ribeiro Rodrigues da Silva. Desenvolvimento Web, Front-end e UI/UX em Recife, PE — Figma, React, TypeScript, Firebase e IA no fluxo de trabalho." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <nav class="navbar">
-        <div class="logo">&lt;Gabriel/&gt;</div>
-        <ul class="nav-links">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contato" class="btn-contact">Contato</a></li>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Gabriel Ribeiro — Início">
+        <span class="brand-mark" aria-hidden="true">GR</span>
+        <span class="brand-name">Gabriel Ribeiro</span>
+      </a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Abrir menu de navegação"
+      >
+        <span class="menu-bar" aria-hidden="true"></span>
+        <span class="menu-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="nav-menu" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#sobre">Sobre &amp; Formação</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#contato" class="nav-cta">Contato</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <header class="hero">
-        <div class="hero-content">
-            <span class="badge">Disponível para Projetos</span>
-            <h1>UI/UX Designer & <br> <span class="highlight">Full-Stack Dev</span></h1>
-            <p>Unindo a performance do Python/Django com a elegância do Design.</p>
-            <div class="hero-buttons">
-                <a href="#projetos" class="btn primary">Ver Projetos</a>
-                <a href="https://github.com/gabriza007" target="_blank" class="btn secondary">
-                    <span class="material-icons">code</span> GitHub
+  <main id="conteudo">
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Recife, PE · Disponível para estágio e projetos</span>
+          </div>
+
+          <h1>Desenvolvimento Web &amp; UI/UX com foco em produto.</h1>
+
+          <p class="hero-lead">
+            Estudante de Técnico em ADS na <strong>ETE Porto Digital</strong> com formação em
+            <strong>Design Orientado por Dados pela CESAR School (80h)</strong>. Desenho interfaces no
+            <strong>Figma</strong> e construo aplicações responsivas com <strong>React, TypeScript, HTML, CSS e JavaScript</strong>, integrando IA generativa no fluxo diário.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">Ver projetos em destaque</a>
+            <a href="https://github.com/gabriza007" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/gabriel-ribeiro-917441368/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Resumo rápido do perfil">
+          <div class="panel-header">
+            <span class="mono-label">PERFIL // 2026</span>
+            <span class="mono-label accent-text">UI/UX + CODE</span>
+          </div>
+          <dl class="spec-list">
+            <div class="spec-row">
+              <dt>Atuação</dt>
+              <dd>Front-end &amp; Interfaces Digitais</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Design</dt>
+              <dd>Figma · Prototipação · Responsivo</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Código</dt>
+              <dd>React · TypeScript · HTML/CSS/JS</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Fluxo</dt>
+              <dd>IA Generativa · Firebase · Testes</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Localização</dt>
+              <dd>Recife, Pernambuco</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJETOS EM DESTAQUE -->
+    <section id="projetos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-index">01</span>
+          <div>
+            <h2>Projetos em Destaque</h2>
+            <p class="section-subtitle">Produtos e interfaces desenvolvidos com foco em clareza, responsividade e uso real.</p>
+          </div>
+        </div>
+
+        <div class="featured-stack">
+          <!-- CASE 01: LIGA CARAMELO -->
+          <article class="case-card case-primary reveal">
+            <div class="case-body">
+              <div class="case-meta">
+                <span class="mono-pill">PROJETO PRINCIPAL</span>
+                <span class="mono-label">Web Pública + Painel Admin</span>
+              </div>
+
+              <h3>Liga Caramelo</h3>
+              <p class="case-summary">
+                Plataforma digital para uma liga de basquete 3x3, dividida entre uma <strong>experiência pública</strong> para atletas e fãs (notícias, partidas, classificação, perfis e estatísticas) e um <strong>painel administrativo operacional</strong> para gestão de equipes, atletas, partidas, súmulas e convites.
+              </p>
+
+              <ul class="case-highlights">
+                <li>Interfaces responsivas para desktop e celular com foco em hierarquia visual e consistência.</li>
+                <li>Fluxos de formulários, edição de perfil com upload de imagem, vínculos de equipe e controle de acesso (RBAC).</li>
+                <li>Integração em tempo real com Firebase, operações transacionais, testes com Jest e validação com Firebase Emulator.</li>
+              </ul>
+
+              <div class="stack-groups">
+                <div class="stack-line">
+                  <span class="stack-label">App público:</span>
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Expo</span>
+                  <span class="tag">React Native Web</span>
+                </div>
+                <div class="stack-line">
+                  <span class="stack-label">Painel admin:</span>
+                  <span class="tag tag-accent">Tailwind CSS 3</span>
+                  <span class="tag">Firebase</span>
+                  <span class="tag">Jest</span>
+                  <span class="tag">RBAC</span>
+                </div>
+              </div>
+
+              <div class="case-actions">
+                <a href="https://liga-caramelo.web.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Acessar site ao vivo <span aria-hidden="true">↗</span>
                 </a>
+                <span class="repo-note">Código-fonte privado</span>
+              </div>
             </div>
-        </div>
-    </header>
 
-    <section id="sobre" class="section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>Sobre Mim</h2>
-                    <p>Tenho 18 anos e sou movido pela curiosidade técnica. Comecei explorando as entranhas do <strong>Python e django</strong> e hoje aplico essa mesma busca por eficiência no desenvolvimento web.</p>
-                    <p>Meu foco é criar aplicações completas: desenho a interface no <strong>Figma</strong> e construo a lógica no <strong>Back-end (Python)</strong>. Atualmente trabalhando no projeto <em>Boletim Aberto</em> para democratizar dados educacionais.</p>
+            <div class="case-visual" aria-hidden="true">
+              <div class="mockup-window">
+                <div class="mockup-bar">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="mockup-url">liga-caramelo.web.app</span>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="material-icons icon-stat">terminal</span>
-                        <h3>Dev</h3>
-                        <p>Python & Django</p>
+                <div class="mockup-content">
+                  <div class="mockup-tabs">
+                    <span class="mockup-tab active">Área Pública</span>
+                    <span class="mockup-tab">Painel Admin</span>
+                  </div>
+                  <div class="mockup-hero-strip">
+                    <span class="mockup-kicker">BASQUETE 3X3 · TEMPORADA</span>
+                    <div class="mockup-title-line"></div>
+                    <div class="mockup-sub-line"></div>
+                  </div>
+                  <div class="mockup-grid">
+                    <div class="mockup-tile">
+                      <span class="tile-label">CLASSIFICAÇÃO</span>
+                      <div class="tile-row"></div>
+                      <div class="tile-row short"></div>
                     </div>
-                    <div class="stat-card">
-                        <span class="material-icons icon-stat">brush</span>
-                        <h3>Design</h3>
-                        <p>Figma & UI/UX</p>
+                    <div class="mockup-tile">
+                      <span class="tile-label">SÚMULAS &amp; EQUIPES</span>
+                      <div class="tile-row"></div>
+                      <div class="tile-row short"></div>
                     </div>
+                  </div>
+                  <div class="mockup-footer-bar">
+                    <span>Auth · Firestore · Storage</span>
+                    <span class="accent-text">Responsivo</span>
+                  </div>
                 </div>
+              </div>
             </div>
+          </article>
+
+          <!-- CASE 02: PONTE SEGURA -->
+          <article class="case-card reveal">
+            <div class="case-body">
+              <div class="case-meta">
+                <span class="mono-pill">PROJETO WEB</span>
+                <span class="mono-label">Mapa &amp; Tempo Real</span>
+              </div>
+
+              <h3>Ponte Segura</h3>
+              <p class="case-summary">
+                Aplicação web de <strong>alertas SOS para estudantes</strong>, combinando mapa interativo e fluxos de comunicação em tempo real pensados para resposta rápida e leitura clara em situações críticas.
+              </p>
+
+              <div class="stack-groups">
+                <div class="stack-line">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Firebase</span>
+                  <span class="tag">Leaflet</span>
+                </div>
+              </div>
+
+              <div class="case-actions">
+                <a href="https://github.com/gabriza007/ponte-segura" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Ver repositório no GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="case-visual compact-visual" aria-hidden="true">
+              <div class="mockup-window">
+                <div class="mockup-bar">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="mockup-url">ponte-segura</span>
+                </div>
+                <div class="mockup-content map-motif">
+                  <div class="map-grid">
+                    <span class="map-pin"></span>
+                  </div>
+                  <div class="mockup-footer-bar">
+                    <span>Leaflet Map · SOS Flow</span>
+                    <span class="accent-text">Realtime</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
+
+        <!-- REPOSITÓRIOS DO GITHUB -->
+        <div class="github-block">
+          <div class="subhead">
+            <div>
+              <h3>Repositórios públicos no GitHub</h3>
+              <p class="subhead-desc">Carregados dinamicamente via GitHub REST API.</p>
+            </div>
+            <a href="https://github.com/gabriza007?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-link">
+              Ver todos no GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="repos-grid" id="github-projects" aria-live="polite" aria-busy="true">
+            <div class="repo-skeleton" aria-hidden="true"></div>
+            <div class="repo-skeleton" aria-hidden="true"></div>
+            <div class="repo-skeleton" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="projetos" class="section dark-bg">
-        <div class="container">
-            <h2>Meus Repositórios</h2>
-            <p class="subtitle">Projetos carregados automaticamente do meu GitHub.</p>
-            
-            <div class="projects-grid" id="github-projects">
-                <p style="color: #666;">Carregando projetos...</p>
-            </div>
+    <!-- SOBRE & FORMAÇÃO -->
+    <section id="sobre" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-index">02</span>
+          <div>
+            <h2>Sobre &amp; Formação</h2>
+            <p class="section-subtitle">Trajetória em desenvolvimento web, design orientado por dados e prática contínua.</p>
+          </div>
         </div>
+
+        <div class="about-layout">
+          <div class="about-copy reveal">
+            <h3>Da prototipação no Figma ao código em produção</h3>
+            <p>
+              Sou estudante do curso <strong>Técnico em Análise e Desenvolvimento de Sistemas (ADS)</strong> na ETE Porto Digital, em Recife, com foco em desenvolvimento web, front-end e interfaces digitais.
+            </p>
+            <p>
+              Combino <strong>domínio de Figma</strong> com implementação prática em <strong>React, TypeScript, HTML, CSS e JavaScript</strong>. No dia a dia, incorporo assistentes de IA generativa para acelerar prototipagem, explorar variações, investigar problemas e revisar código — sempre validando manualmente cada fluxo no navegador.
+            </p>
+            <p>
+              Com a formação <strong>FAST da CESAR School</strong>, também trago base em Design Orientado por Dados, visualização de informações e organização de interfaces voltadas ao uso real.
+            </p>
+          </div>
+
+          <div class="education-list reveal" aria-label="Formação acadêmica e complementar">
+            <article class="edu-card">
+              <div class="edu-top">
+                <span class="mono-pill">EM ANDAMENTO</span>
+                <span class="mono-label">Técnico</span>
+              </div>
+              <h3>Técnico em Análise e Desenvolvimento de Sistemas (ADS)</h3>
+              <p class="edu-org">ETE Porto Digital</p>
+              <p class="edu-desc">Base técnica em desenvolvimento de software, lógica, web e projetos práticos.</p>
+            </article>
+
+            <article class="edu-card">
+              <div class="edu-top">
+                <span class="mono-pill">80 HORAS</span>
+                <span class="mono-label">Concluído · set/2025</span>
+              </div>
+              <h3>FAST — Design Orientado por Dados</h3>
+              <p class="edu-org">CESAR School</p>
+              <p class="edu-desc">UX Data Driven, Data Storytelling, visualização de dados e IA, agilidade, ética e humanização dos dados.</p>
+            </article>
+
+            <article class="edu-card">
+              <div class="edu-top">
+                <span class="mono-pill">64 HORAS</span>
+                <span class="mono-label">Formação Complementar</span>
+              </div>
+              <h3>Programando o Futuro</h3>
+              <p class="edu-org">CESAR School</p>
+              <p class="edu-desc">Python, HTML, CSS, JavaScript, Flask, Jinja2, bancos relacionais e APIs REST.</p>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Habilidades</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><span class="material-icons">code</span> Back-end</h3>
-                    <ul>
-                        <li>Python 3</li>
-                        <li>Django Framework</li>
-                        <li>Lógica de Programação</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><span class="material-icons">design_services</span> Front & Design</h3>
-                    <ul>
-                        <li>Figma (Prototipagem)</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript Básico</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><span class="material-icons">settings_suggest</span> Infra & Tools</h3>
-                    <ul>
-                        <li>Linux (Manjaro/Arch)</li>
-                        <li>Git & GitHub</li>
-                        <li>Hardware Troubleshooting</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- STACK -->
+    <section id="stack" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-index">03</span>
+          <div>
+            <h2>Stack &amp; Competências</h2>
+            <p class="section-subtitle">Ferramentas usadas nos projetos e conhecimentos complementares em estudo.</p>
+          </div>
         </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="mono-label accent-text">01 · DESIGN</span>
+            <h3>UI/UX &amp; Prototipação</h3>
+            <ul>
+              <li>Figma (interfaces e protótipos)</li>
+              <li>Design responsivo (desktop e mobile)</li>
+              <li>Hierarquia visual e tipografia</li>
+              <li>Fluxos de formulários e navegação</li>
+              <li>UX Data Driven &amp; Data Storytelling</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="mono-label accent-text">02 · FRONT-END</span>
+            <h3>Desenvolvimento Web</h3>
+            <ul>
+              <li>HTML5, CSS3 e JavaScript</li>
+              <li>React e TypeScript</li>
+              <li>Expo, Expo Router e React Native Web</li>
+              <li>Tailwind CSS (painel admin da Liga)</li>
+              <li>Consumo de APIs REST</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="mono-label accent-text">03 · FLUXO &amp; QA</span>
+            <h3>IA, Dados &amp; Qualidade</h3>
+            <ul>
+              <li>IA generativa no fluxo diário</li>
+              <li>Firebase (Auth, Firestore, Storage, Hosting)</li>
+              <li>Controle de acesso (RBAC)</li>
+              <li>Jest, Testing Library e Firebase Emulator</li>
+              <li>Git e GitHub</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="mono-label accent-text">04 · ESTUDOS</span>
+            <h3>Base Complementar</h3>
+            <ul>
+              <li>Python e Streamlit (Assistente de IA)</li>
+              <li>Google Gen AI (protótipo de chat)</li>
+              <li>Flask e Jinja2 (CESAR School)</li>
+              <li>Bancos de dados relacionais</li>
+              <li>Fundamentos em C</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer id="contato">
-        <div class="container footer-content">
-            <h2>Vamos conversar?</h2>
-            <div class="social-links">
-                 <a href="mailto:gabrielribas.2801@gmail.com?subject=Contato do Portfólio&body=Olá Gabriel," class="social-btn">
-    Email
-</a>
-                <a href="https://www.linkedin.com/in/gabriel-ribeiro-917441368" class="social-btn">LinkedIn</a>
-                <a href="https://github.com/gabriza007" class="social-btn">GitHub</a>
-            </div>
-            <p class="copyright">© 2026 Gabriel Ribeiro. Powered by Code & Coffee.</p>
+  <!-- CONTATO / FOOTER -->
+  <footer id="contato" class="site-footer">
+    <div class="container">
+      <div class="footer-card reveal">
+        <div class="footer-copy">
+          <span class="mono-label accent-text">04 · CONTATO</span>
+          <h2>Vamos construir algo juntos?</h2>
+          <p>
+            Aberto a oportunidades de <strong>estágio em UI/UX e Front-end</strong> em Recife/PE e projetos web.
+          </p>
         </div>
-    </footer>
 
-    <script>
-        const username = "gabriza007";
+        <div class="footer-actions">
+          <a
+            href="mailto:gabrielribas.2801@gmail.com?subject=Contato%20pelo%20Portf%C3%B3lio&body=Ol%C3%A1%20Gabriel,"
+            class="btn btn-primary"
+          >
+            Enviar e-mail
+          </a>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="copy-email-btn"
+            data-email="gabrielribas.2801@gmail.com"
+          >
+            Copiar e-mail
+          </button>
+        </div>
+        <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
+      </div>
 
-        const container = document.getElementById('github-projects');
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 Gabriel Ribeiro Rodrigues da Silva · Recife, PE</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/gabriel-ribeiro-917441368/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/gabriza007" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://liga-caramelo.web.app/" target="_blank" rel="noopener noreferrer">Liga Caramelo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        function getProjects() {
-            fetch(`https://api.github.com/users/${username}/repos?sort=updated&direction=desc`)
-            .then(response => {
-                if (!response.ok) throw new Error("Usuário não encontrado");
-                return response.json();
-            })
-            .then(data => {
-                container.innerHTML = '';
-                
-                const projects = data.slice(0, 6);
-
-                if (projects.length === 0) {
-                    container.innerHTML = '<p>Nenhum repositório encontrado.</p>';
-                    return;
-                }
-
-                projects.forEach(repo => {
-                    const card = document.createElement('article');
-                    card.className = 'project-card';
-                    
-                    const description = repo.description ? repo.description : "Projeto de desenvolvimento.";
-                    const language = repo.language ? repo.language : "Código";
-
-                    card.innerHTML = `
-                        <div class="project-header">
-                            <span class="folder-icon material-icons">folder</span>
-                            <div class="project-links">
-                                <a href="${repo.html_url}" target="_blank"><span class="material-icons">open_in_new</span></a>
-                            </div>
-                        </div>
-                        <h3>${repo.name}</h3>
-                        <p>${description}</p>
-                        <div class="card-footer">
-                            <span class="tech-tag">${language}</span>
-                            <span class="stars"><span class="material-icons star-icon">star</span> ${repo.stargazers_count}</span>
-                        </div>
-                    `;
-                    container.appendChild(card);
-                });
-            })
-            .catch(error => {
-                container.innerHTML = `<p style="color:#ff5555">Erro: Verifique se o usuário "${username}" está correto no código.</p>`;
-            });
-        }
-        
-        getProjects();
-    </script>
+  <script src="script.js" defer></script>
 </body>
-
 </html>
-

@@ -1,19 +1,19 @@
 # Gabriel Ribeiro | Portfólio
 
-Portfólio pessoal de desenvolvimento web e UI/UX, com apresentação, tecnologias, projetos e canais de contato.
+Portfólio pessoal de desenvolvimento web, front-end e UI/UX, com projetos em destaque, formação, competências técnicas e integração com a API pública do GitHub.
 
 **[Acessar o portfólio](https://gabriza007.github.io/portifolio/)** · [Perfil no GitHub](https://github.com/gabriza007)
 
 ## Sobre o projeto
 
-Site estático construído com HTML, CSS e JavaScript. A seção de projetos consulta a API pública do GitHub para exibir os repositórios da conta `gabriza007`.
+Site estático construído com HTML semântico, CSS modular com tokens de design e JavaScript puro. Destaca os projetos principais (**Liga Caramelo** e **Ponte Segura**) e consulta a API pública do GitHub para exibir os repositórios atualizados da conta `gabriza007`.
 
 ### Recursos
 
-- Apresentação profissional e seção sobre o desenvolvedor.
-- Listagem de projetos com descrição, linguagem e estrelas do GitHub.
-- Organização das habilidades em desenvolvimento, design e ferramentas.
-- Links para LinkedIn, GitHub e contato por e-mail.
+- Layout Editorial Dark responsivo com tokens semânticos de cor e tipografia.
+- Seção de projetos em destaque (Liga Caramelo público + painel admin e Ponte Segura) antes dos repositórios públicos do GitHub.
+- Seção de formação (ETE Porto Digital e CESAR School) e matriz de competências técnicas atualizada.
+- Menu mobile acessível, navegação por teclado (`:focus-visible`, skip link), estados de carregamento/erro e cópia rápida de e-mail.
 
 ## Tecnologias
 
@@ -21,26 +21,20 @@ HTML5 · CSS3 · JavaScript · GitHub REST API · Google Fonts
 
 ## Executar localmente
 
-Clone o repositório e abra `index.html` no navegador:
-
 ```bash
 git clone https://github.com/gabriza007/portifolio.git
 cd portifolio
-```
-
-Também é possível servir a pasta com Python 3:
-
-```bash
 python -m http.server 8000
 ```
 
-Acesse `http://localhost:8000`. Não há instalação de dependências nem etapa de build. A listagem de projetos e as fontes externas precisam de conexão com a internet; a API do GitHub está sujeita a limites de requisições.
+Acesse `http://localhost:8000`. Não há instalação de dependências nem etapa de build.
 
 ## Estrutura
 
 ```text
-index.html   Conteúdo, navegação e consulta à API do GitHub
-styles.css   Estilos e apresentação visual
+index.html   Estrutura semântica e conteúdo do portfólio
+styles.css   Tokens de design, layout responsivo e acessibilidade
+script.js    Menu mobile, reveal progressivo, cópia de e-mail e API do GitHub
 ```
 
 ## Autor
