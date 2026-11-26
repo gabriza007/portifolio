@@ -1,6 +1,14 @@
 (() => {
   const GITHUB_USERNAME = 'gabriza007';
-  const EXCLUDED_REPOS = new Set(['gabriza007', 'portifolio', 'ponte-segura', 'ia']);
+  const EXCLUDED_REPOS = new Set([
+    'gabriza007',
+    'portifolio',
+    'ponte-segura',
+    'ia',
+    'boletim-aberto',
+    'curso-python-django',
+    'c50-mesmo',
+  ]);
   const MAX_REPOS = 6;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -295,8 +303,19 @@
     });
   }
 
-  /* 4. Loader seguro dos demais repositórios públicos do GitHub */
+  /* 4. Loader seguro de projetos adicionais no GitHub (oculta cursos/estudos e só exibe se houver extras) */
+  const extraReposBlock = document.getElementById('extra-repos-block');
   const reposContainer = document.getElementById('github-projects');
+
+  function isExcludedRepo(repo) {
+    const name = (repo.name || '').toLowerCase();
+    return (
+      repo.fork ||
+      EXCLUDED_REPOS.has(name) ||
+      name.startsWith('curso-') ||
+      name.startsWith('c50-')
+    );
+  }
 
   function renderRepoRow(repo) {
     const li = document.createElement('li');
@@ -316,7 +335,7 @@
     title.textContent = repo.name;
 
     const desc = document.createElement('p');
-    desc.textContent = repo.description || 'Repositório público de código e estudos.';
+    desc.textContent = repo.description || 'Repositório público de projeto.';
 
     main.append(title, desc);
 
@@ -340,31 +359,9 @@
     return li;
   }
 
-  function renderRepoState(message, showRetry) {
-    if (!reposContainer) return;
-    reposContainer.innerHTML = '';
-
-    const li = document.createElement('li');
-    li.className = 'repos-state';
-
-    const text = document.createElement('p');
-    text.textContent = message;
-    li.appendChild(text);
-
-    if (showRetry) {
-      const retryBtn = document.createElement('button');
-      retryBtn.type = 'button';
-      retryBtn.className = 'btn-outline-ink';
-      retryBtn.textContent = 'Tentar novamente';
-      retryBtn.addEventListener('click', loadRepositories);
-      li.appendChild(retryBtn);
-    }
-
-    reposContainer.appendChild(li);
-  }
-
   async function loadRepositories() {
-    if (!reposContainer) return;
+    if (!reposContainer || !extraReposBlock) return;
+    extraReposBlock.hidden = true;
     reposContainer.setAttribute('aria-busy', 'true');
 
     try {
@@ -376,22 +373,22 @@
       }
 
       const data = await response.json();
-      const repos = data
-        .filter((repo) => !repo.fork && !EXCLUDED_REPOS.has(repo.name.toLowerCase()))
-        .slice(0, MAX_REPOS);
+      const repos = data.filter((repo) => !isExcludedRepo(repo)).slice(0, MAX_REPOS);
 
       reposContainer.innerHTML = '';
 
       if (repos.length === 0) {
-        renderRepoState('Nenhum repositório adicional encontrado.', false);
+        extraReposBlock.hidden = true;
         return;
       }
 
       const fragment = document.createDocumentFragment();
       repos.forEach((repo) => fragment.appendChild(renderRepoRow(repo)));
       reposContainer.appendChild(fragment);
+      extraReposBlock.hidden = false;
     } catch {
-      renderRepoState('Não foi possível carregar os repositórios do GitHub agora.', true);
+      reposContainer.innerHTML = '';
+      extraReposBlock.hidden = true;
     } finally {
       reposContainer.setAttribute('aria-busy', 'false');
       if (typeof window.ScrollTrigger !== 'undefined') {

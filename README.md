@@ -8,7 +8,7 @@ Portfólio pessoal em estética editorial com galeria de prints reais da **Liga 
 
 - Identidade editorial em papel claro (`#f4f1ea`) contrastada com galeria escura (`#111110`) para exibição dos prints reais da Liga Caramelo.
 - Animações de scroll gratuitas com **GSAP 3 + ScrollTrigger** e rolagem suave com **Lenis**, respeitando `prefers-reduced-motion`.
-- Índice editorial para projetos complementares (**Ponte Segura**, **Assistente de IA**) e carregamento dinâmico dos demais repositórios pela API pública do GitHub.
+- Índice editorial para projetos complementares (**Ponte Segura** e **Portfólio Pessoal**) e carregamento automático de novos repositórios de projetos pela API pública do GitHub.
 - Menu mobile acessível, navegação por teclado (`:focus-visible`, skip link) e cópia rápida de e-mail.
 
 ## Tecnologias

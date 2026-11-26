@@ -221,8 +221,13 @@
     <section id="projetos" class="section">
       <div class="container">
         <div class="index-head" data-reveal>
-          <p class="mono-kicker-ink">Índice de projetos</p>
-          <h2>Outros projetos &amp; repositórios</h2>
+          <div>
+            <p class="mono-kicker-ink">Índice de projetos</p>
+            <h2>Outros projetos</h2>
+          </div>
+          <a href="https://github.com/gabriza007?tab=repositories" target="_blank" rel="noopener noreferrer" class="editorial-link">
+            Ver GitHub <span aria-hidden="true">↗</span>
+          </a>
         </div>
 
         <ul class="index-list">
@@ -241,32 +246,30 @@
           </li>
 
           <li class="index-row" data-reveal>
-            <a href="https://github.com/gabriza007/IA" target="_blank" rel="noopener noreferrer" class="index-link">
+            <a href="https://github.com/gabriza007/portifolio" target="_blank" rel="noopener noreferrer" class="index-link">
               <div class="index-main">
-                <span class="index-tag">Protótipo</span>
-                <h3>Assistente de IA</h3>
-                <p>Interface de chat interativo com histórico durante a sessão para prática com modelos generativos.</p>
+                <span class="index-tag">Código aberto</span>
+                <h3>Portfólio Pessoal</h3>
+                <p>Site estático em estética editorial com animações de scroll via GSAP e Lenis, galeria responsiva e foco em acessibilidade.</p>
               </div>
               <div class="index-meta">
-                <span class="index-stack">Python · Streamlit · Google Gen AI</span>
+                <span class="index-stack">HTML5 · CSS3 · JavaScript · GSAP · Lenis</span>
                 <span class="index-arrow" aria-hidden="true">↗</span>
               </div>
             </a>
           </li>
         </ul>
 
-        <div class="repos-subhead" data-reveal>
-          <span>Demais repositórios públicos no GitHub</span>
-          <a href="https://github.com/gabriza007?tab=repositories" target="_blank" rel="noopener noreferrer" class="editorial-link">
-            Ver perfil completo <span aria-hidden="true">↗</span>
-          </a>
-        </div>
+        <div id="extra-repos-block" hidden>
+          <div class="repos-subhead">
+            <span>Outros repositórios de projetos no GitHub</span>
+            <a href="https://github.com/gabriza007?tab=repositories" target="_blank" rel="noopener noreferrer" class="editorial-link">
+              Ver perfil completo <span aria-hidden="true">↗</span>
+            </a>
+          </div>
 
-        <ul class="index-list index-list--compact" id="github-projects" aria-live="polite" aria-busy="true">
-          <li class="index-skeleton" aria-hidden="true"></li>
-          <li class="index-skeleton" aria-hidden="true"></li>
-          <li class="index-skeleton" aria-hidden="true"></li>
-        </ul>
+          <ul class="index-list index-list--compact" id="github-projects" aria-live="polite" aria-busy="false"></ul>
+        </div>
       </div>
     </section>
 
@@ -345,7 +348,7 @@
             </div>
             <div class="tool-group">
               <h3>Estudos Complementares</h3>
-              <p>Python, Streamlit, Google Gen AI, Flask, Jinja2, bancos relacionais, APIs REST e fundamentos em C.</p>
+              <p>Python, Flask, Jinja2, bancos relacionais, APIs REST e fundamentos em C.</p>
             </div>
           </div>
         </div>
